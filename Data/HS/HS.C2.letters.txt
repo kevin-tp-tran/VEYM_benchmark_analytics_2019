@@ -1,0 +1,306 @@
+Student_ID	Grade	Score	Q1	Q2	Q3	Q4	Q5	Q6	Q7	Q8	Q9	Q10	Q11	Q12	Q13	Q14	Q15	Q16	Q17	Q18	Q19	Q20	Q21	Q22	Q23	Q24	Q25	Q26	Q27	Q28	Q29	Q30	Q31	Q32	Q33	Q34	Q35	Q36	Q37	Q38	Q39	Q40
+20000010	47.50%	19	A	E	C	C	A	B	B	B	E	A	B	E	C	B	E	B	B	E	D	B	E	B	A	D	A	B	A	E	C	C	B	D	C	C	B	B	C	B	A	E
+20000011	70%	28	A	B	E	C	A	B	B	C	C	D	B	D	C	B	E	B	B	C	D	A	B	B	C	B	E	D	A	D	C	D	D	E	D	C	C	C	C	B	B	C
+20000012	50%	20	C	B	E	C	A	B	E	D	E	D	C	D	D	B	E	B	B	E	E	B	E	D	B	B	E	B	A	E	C	A	B	B	B	B	A	B	D	B	A	E
+20000013	50%	20	C	B	A	C	D	B	A	C	E	D	B	B	B	B	E	C	B	E	C	A	A	D	B	B	B	D	A	D	C	B	B	B	D	C	A	B	C	B	A	C
+20000014	65%	26	B	B	E	A	A	B	B	A	B	A	C	D	C	A	E	B	B	E	D	C	C	B	C	E	E	D	A	E	C	D	B	B	B	C	E	C	D	B	A	E
+20000015	60%	24	A	B	C	C	A	B	B	D	D	B	B	D	E	A	C	B	B	E	B	B	E	B	A	E	E	B	A	D	D	D	D	B	A	C	A	D	C	B	A	D
+20000016	90%	36	B	B	E	C	A	B	B	A	C	A	B	D	E	B	E	B	A	E	D	C	B	B	C	B	E	D	A	D	C	D	B	B	D	B	A	C	C	B	A	D
+310000201	55%	22	C	B	E	C	A	B	A	B	C	C	B	D	E	E	E	B	A	E	A	B	E	B	A	D	E	B	B	D	C	C	D	E	D	A	A	B	C	A	B	D
+310000202	55%	22	C	B	E	C	A	B	A	B	C	C	B	D	E	E	E	B	A	E	A	B	E	B	A	D	E	B	B	D	C	C	D	E	D	A	A	B	C	A	B	D
+310000203	57.50%	23	E	B	E	C	A	B	A	B	C	C	B	D	E	E	E	B	A	E	A	B	E	B	A	B	E	B	B	D	C	C	B	E	D	A	A	B	C	A	B	D
+310000204	37.50%	15	D	C	E	D	A	B	E	E	C	C	B	A	E	E	C	B	A	E	A	A	C	B	A	D	B	B	B	E	B	C	D	E	D	B	A	C	C	A	A	C
+310000205	42.50%	17	D	C	E	D	A	B	A	C	E	C	B	E	E	E	C	B	A	E	A	D	E	B	B	D	E	B	B	D	C	C	E	D	D	A	A	B	C	B	A	C
+310000210	57.50%	23	C	B	E	C	A	B	A	B	C	C	B	D	E	A	E	B	A	E	A	B	E	B	A	D	E	B	B	D	C	C	B	E	D	A	A	B	C	A	B	D
+450000001	45%	18	B	B	E	C	A	B	E	C	B	A	E	E	B	A	B	E	B	B	D	B	E	B	D	B	E	D	A	C	D	C	B	E	B	C	A	B	C	B	A	C
+450000002	47.50%	19	B	B	E	C	B	B	E	B	E	D	B	D	A	B	E	C	B	C	D	B	E	B	B	D	B	A	A	A	B	A	B	B	C	A	B	B	C	B	A	C
+450000003	42.50%	17	D	B	C	C	D	B	A	D	B	D	E	E	C	B	A	E	D	E	D	B	B	B	B	D	E	B	A	C	B	A	B	E	B	C	D	B	C	B	B	D
+450000004	37.50%	15	B	B	E	C	A	B	E	C	B	D	E	E	C	B	E	E	B	C	A	D	E	D	A	D	E	B	C	E	D	C	B	E	E	B	D	C	C	B	A	E
+450000005	30%	12	D	C	C	C	A	D	E	A	B	D	E	D	D	A	E	E	B	C	A	D	E	D	A	D	E	B	C	E	D	C	B	E	E	B	D	C	C	B	A	E
+570000075	32.50%	13	C	C	C	C	A	B	E	C	E	C	B	C	E	D	B	E	B	E	E	C	E	B	C	D	B	B	C	E	B	C	B	A	A	C	A	D	C	B	B	E
+570000076	40%	16	C	C	C	C	A	B	E	D	C	A	E	B	A	B	B	B	B	B	D	C	E	D	A	D	E	B	A	D	B	B	B	C	D	C	A	A	D	B	A	C
+630000001	25%	10	D	C	C	C	E	B	A	C	E	A	B	D	B	A	C	D	A	D	A	C	E	E	A	D	E	B	A	D	B	A	B	E	B	A	A	X	X	X	X	X
+630000002	20%	8	D	E	E	C	D	B	A	E	B	A	B	A	E	D	B	D	B	E	A	C	E	D	A	D	B	B	A	D	B	E	D	E	C	A	D	X	X	X	X	X
+630000003	25%	10	D	C	E	C	D	B	E	A	E	C	C	D	D	E	E	C	A	E	D	C	D	D	A	D	D	B	C	E	B	A	B	C	C	A	D	X	X	X	X	X
+630000004	22.50%	9	C	C	A	E	D	B	D	A	C	A	B	D	C	D	A	B	A	B	C	C	D	B	A	D	B	B	E	A	B	A	B	C	B	B	C	X	X	X	X	X
+630000005	25%	10	E	B	E	C	B	B	E	C	E	A	C	E	A	A	E	E	D	B	D	C	E	B	A	D	E	B	B	B	C	D	A	C	B	B	B	X	X	X	X	X
+630000006	22.50%	9	A	E	A	C	A	B	B	B	E	A	E	A	B	A	E	D	B	D	D	C	E	D	A	C	B	B	A	D	B	D	E	A	B	B	B	X	X	X	X	X
+630000007	22.50%	9	A	B	C	E	D	B	E	C	E	C	E	D	D	A	B	B	D	B	D	C	E	D	A	E	E	B	D	E	B	C	B	A	B	E	A	X	X	X	X	X
+630000008	27.50%	11	D	C	E	C	E	B	E	C	A	D	E	B	C	A	E	B	A	D	D	B	E	C	C	D	A	B	A	E	A	B	E	D	C	E	B	X	X	X	X	X
+630000009	5%	2	D	X	X	C	X	X	X	X	E	X	C	E	X	D	D	X	X	X	X	C	E	X	X	D	X	X	X	X	X	X	X	B	X	B	B	X	X	X	X	X
+630000010	20%	8	A	B	A	C	B	B	E	D	B	B	A	B	B	D	E	B	A	C	A	C	E	B	A	B	B	A	D	C	E	B	A	C	B	D	E	C	B	A	B	B
+630000011	20%	8	B	D	A	A	C	B	E	D	E	A	E	E	C	D	A	B	C	D	D	B	E	A	D	D	E	C	A	E	B	B	D	C	C	C	C	X	X	X	X	X
+630000012	32.50%	13	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B	B
+630000013	22.50%	9	A	C	C	C	E	C	E	D	D	A	E	E	E	B	C	D	C	C	D	C	B	C	D	D	E	D	B	E	B	D	D	A	C	B	A	X	X	X	X	X
+630000014	50%	20	D	B	E	C	A	B	E	D	E	D	E	D	E	D	E	B	A	E	D	C	E	D	B	B	A	A	A	D	C	C	B	B	E	C	A	X	X	X	X	X
+630000015	30%	12	E	E	C	C	E	B	E	B	B	B	B	D	E	C	D	B	A	C	E	A	B	D	C	E	B	D	B	D	D	E	A	E	C	B	C	X	X	X	X	X
+710000072	32.50%	13	A	B	A	C	C	B	E	A	B	D	A	D	D	D	E	B	E	E	A	C	E	E	A	D	A	E	B	B	B	A	B	D	D	B	C	B	B	B	A	E
+710000073	32.50%	13	C	B	E	C	B	B	A	D	E	A	E	E	B	C	E	B	A	A	E	C	E	B	A	D	E	C	A	E	B	C	B	D	C	B	A	B	A	B	B	C
+710000074	42.50%	17	A	B	E	C	D	B	D	A	E	D	E	B	E	A	E	B	A	E	A	A	E	C	B	B	B	B	A	E	E	A	B	B	C	B	D	C	A	B	B	D
+710000075	45%	18	B	C	E	C	A	B	D	A	E	A	B	B	A	D	A	B	B	E	C	B	E	B	B	D	B	A	A	D	D	A	B	E	C	C	D	C	C	A	B	D
+710000076	42.50%	17	B	D	E	C	B	A	C	D	E	B	E	C	B	A	E	B	D	E	D	C	C	C	X	B	A	B	A	D	C	D	B	B	D	B	B	C	D	B	A	E
+710000077	47.50%	19	C	B	E	C	B	B	B	C	B	D	E	E	D	E	A	B	C	D	D	A	E	B	A	E	E	A	A	A	E	B	B	E	C	C	A	C	C	B	A	X
+710000078	17.50%	7	D	D	C	C	D	B	E	C	E	C	E	C	A	A	E	D	B	B	C	C	C	B	A	D	B	B	C	E	B	D	A	A	B	B	D	C	D	B	B	E
+710000079	47.50%	19	D	B	E	C	D	D	D	B	D	A	C	D	A	A	E	B	A	E	D	C	D	C	A	B	A	B	A	D	B	D	B	E	B	C	A	B	C	B	A	D
+710000080	50%	20	C	B	E	C	A	B	E	D	B	A	E	D	E	A	E	B	E	E	D	B	B	D	B	D	A	D	A	D	E	B	B	E	E	C	B	B	A	B	A	C
+740000001	95%	38	B	B	E	C	A	B	B	A	C	B	B	D	E	B	E	B	A	E	B	B	B	B	C	E	E	D	A	D	C	D	B	B	D	C	A	C	C	B	A	D
+740000002	100%	40	B	B	E	C	A	B	B	A	C	D	B	D	E	B	E	B	A	E	D	B	B	B	C	E	E	D	A	D	C	D	B	B	D	C	A	C	C	B	A	D
+740000003	77.50%	31	B	B	E	C	A	B	B	D	C	D	B	D	E	B	E	B	C	D	B	D	B	A	C	E	E	E	A	D	C	D	B	B	D	B	A	C	D	B	A	D
+740000004	92.50%	37	B	B	E	C	A	B	B	A	C	D	A	D	E	B	E	B	A	E	D	B	A	B	C	E	E	D	A	D	C	D	C	B	D	C	A	C	C	B	A	D
+740000005	95%	38	B	B	E	C	A	B	B	A	C	D	B	D	E	B	E	B	A	E	D	B	B	B	C	E	E	D	A	D	C	D	B	B	D	C	A	B	C	B	A	A
+740000006	85%	34	B	B	E	C	A	B	B	B	C	D	B	D	E	B	E	B	A	E	D	B	B	B	C	E	E	D	A	B	B	B	C	B	D	C	A	C	C	B	A	X
+740000007	95%	38	B	C	E	C	A	B	B	A	C	D	B	D	E	B	E	B	A	E	D	B	B	B	C	E	E	D	A	D	C	D	B	B	D	C	A	C	C	B	A	E
+740000008	22.50%	9	C	C	D	A	B	E	D	C	B	A	B	C	D	E	E	D	C	B	A	A	B	C	D	E	E	E	D	C	B	A	A	B	C	D	E	B	C	B	A	B
+740000009	55%	22	B	B	E	C	A	B	E	E	D	E	E	B	E	X	E	E	B	E	E	A	E	B	A	D	E	B	B	A	C	D	B	B	D	C	A	B	C	B	A	D
+740000010	92.50%	37	B	B	E	C	A	B	B	A	C	D	B	D	E	B	E	B	A	E	D	B	E	B	C	E	E	D	A	D	C	D	B	C	D	C	A	E	C	B	A	D
+750000001	25%	10	A	B	E	C	A	B	A	C	B	A	A	E	B	C	E	D	E	D	D	D	E	D	A	B	A	B	A	C	B	C	A	B	A	B	D	C	D	A	B	C
+750000002	30%	12	D	D	D	C	E	B	B	E	E	B	D	A	E	A	E	B	C	E	D	B	E	A	E	A	B	B	B	C	B	B	D	B	C	B	A	B	C	A	B	E
+750000003	42.50%	17	A	B	E	C	A	B	B	C	C	E	E	E	B	A	E	B	A	B	E	A	E	D	B	D	E	B	A	E	D	D	D	B	B	A	C	B	C	B	A	C
+750000004	37.50%	15	A	B	C	C	D	B	B	C	C	E	E	D	B	A	E	B	B	B	E	A	E	D	B	D	E	B	A	E	D	D	D	B	C	C	C	B	C	B	B	C
+750000005	35%	14	A	B	E	C	A	B	B	C	C	E	E	D	B	A	E	B	B	C	E	A	E	D	B	D	A	B	A	E	D	A	D	B	C	A	C	B	C	B	B	C
+750000006	27.50%	11	A	B	C	C	A	B	A	C	B	D	E	A	B	A	E	B	C	D	E	A	E	D	B	D	A	B	A	E	D	B	D	B	C	A	D	B	B	B	A	C
+760000002	45%	18	C	B	E	C	D	B	E	E	B	E	E	E	E	B	D	C	B	B	C	B	B	B	A	E	B	B	A	D	B	D	B	E	B	B	A	A	D	B	A	D
+760000003	32.50%	13	C	B	E	C	A	B	A	A	A	B	B	D	D	B	C	E	B	A	D	C	E	B	B	A	D	C	C	A	B	D	E	E	A	A	B	C	A	D	C	E
+760000004	37.50%	15	C	B	E	C	D	B	A	E	E	A	E	B	E	B	D	C	B	B	C	B	B	B	A	E	A	B	A	D	B	C	E	B	C	A	A	E	E	B	B	A
+760000006	20%	8	A	C	B	D	C	B	E	D	A	C	B	D	C	E	C	D	B	A	C	C	B	D	E	D	D	C	B	D	E	A	D	C	B	A	A	D	C	B	D	C
+760000007	45%	18	B	E	E	C	A	B	A	E	E	A	E	B	C	B	D	C	B	B	C	B	B	B	A	E	A	B	A	D	B	C	E	B	C	A	A	X	C	B	A	D
+760000008	27.50%	11	C	B	E	C	D	B	A	A	A	B	B	D	D	B	C	E	D	A	B	B	A	E	C	D	A	A	B	E	A	B	D	A	A	C	B	D	A	D	D	B
+760000009	47.50%	19	C	B	E	C	D	B	E	E	B	E	E	B	E	B	D	B	B	B	C	B	B	B	A	E	B	B	A	E	C	D	B	E	C	D	A	B	C	B	A	E
+760000010	42.50%	17	B	E	E	C	D	B	A	E	E	A	E	B	E	B	D	C	B	B	C	B	B	B	A	E	A	B	A	D	C	C	E	B	D	A	A	C	D	C	C	C
+780000001	72.50%	29	B	B	E	C	A	B	D	A	C	B	D	A	E	B	D	B	A	E	E	B	E	B	B	E	E	B	A	D	D	D	B	D	D	C	A	C	C	B	A	D
+800000001	65%	26	B	C	E	C	A	B	C	D	B	D	B	B	E	B	E	C	E	E	D	E	B	B	C	A	E	D	A	E	C	D	B	A	C	C	B	D	C	B	A	D
+800000002	75%	30	B	B	E	C	A	C	B	A	C	A	A	B	E	D	C	B	A	E	D	A	B	B	C	A	E	D	A	E	C	D	B	B	D	C	C	C	C	B	A	D
+800000003	57.50%	23	B	B	C	B	E	A	A	D	E	A	B	B	E	D	B	B	A	E	A	D	B	B	C	A	E	D	A	E	C	D	B	A	D	C	C	C	C	B	A	D
+800000004	62.50%	25	D	C	E	C	A	B	B	A	C	D	A	E	E	B	E	C	B	E	D	B	B	C	B	A	E	D	B	D	A	B	B	B	D	A	A	C	D	B	A	C
+800000005	60%	24	B	B	E	C	A	C	B	C	C	D	B	D	B	B	E	B	A	E	B	B	C	B	X	A	D	E	A	A	C	C	C	A	B	C	A	D	C	B	C	D
+850000001	40%	16	B	B	E	C	D	B	A	A	E	D	C	D	D	E	A	D	B	E	D	C	E	B	B	B	D	B	C	E	C	C	B	E	C	A	B	B	A	B	A	D
+850000002	45%	18	C	B	E	C	A	B	A	B	B	D	E	D	D	D	C	B	A	C	D	B	E	D	B	D	E	D	A	E	D	C	B	E	A	B	D	B	C	B	A	B
+850000003	55%	22	C	B	E	C	A	B	A	D	D	D	A	B	D	B	E	E	A	E	D	B	E	D	B	D	E	D	A	E	D	A	B	E	C	C	A	B	C	B	A	D
+850000004	40%	16	E	B	E	C	A	B	A	C	B	D	E	B	D	A	E	D	A	D	E	B	C	D	B	D	E	D	A	E	D	A	B	E	C	B	D	C	E	B	B	D
+850000007	35%	14	E	C	E	C	D	B	C	A	E	B	B	D	E	B	B	C	B	D	C	D	B	A	C	D	E	C	D	D	B	B	C	O	B	B	C	C	C	C	C	C
+970000000	32.50%	13	C	B	C	C	D	D	C	D	E	C	B	C	B	C	E	E	B	E	E	B	E	B	A	B	A	B	A	E	C	B	E	B	B	C	A	B	D	B	B	C
+970000002	27.50%	11	A	B	C	C	A	E	E	A	E	D	C	E	D	D	A	B	A	D	E	C	E	D	B	B	A	D	A	E	C	A	B	E	C	A	B	B	D	A	B	C
+970000004	15%	6	D	A	C	B	C	D	D	E	D	B	C	A	D	A	B	E	E	C	D	C	D	A	B	A	A	E	C	A	C	B	C	C	D	D	B	C	A	B	A	B
+970000005	20%	8	D	B	C	C	B	B	A	B	B	B	E	E	D	C	D	D	B	A	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C
+1120000001	32.50%	13	D	C	D	B	A	B	C	C	E	A	E	C	E	A	A	B	E	E	D	B	E	B	A	B	A	B	D	C	C	B	B	E	C	C	B	D	A	B	B	D
+1120000002	35%	14	A	C	C	C	A	B	E	A	A	C	E	A	D	A	E	C	D	E	E	B	E	B	A	D	A	D	E	E	B	B	D	B	D	B	D	A	A	B	A	D
+1120000003	52.50%	21	E	B	E	C	A	B	A	D	E	E	D	D	E	B	C	C	A	E	D	B	B	D	B	D	A	B	A	D	C	D	D	E	C	C	A	B	C	B	B	C
+1120000004	40%	16	E	C	E	C	A	B	D	E	E	D	C	E	D	E	E	D	D	B	D	B	C	E	A	C	E	B	A	E	B	C	B	B	B	C	D	B	A	B	A	D
+1120000005	42.50%	17	B	D	E	C	A	B	D	E	C	D	B	E	D	A	E	C	C	C	D	A	E	B	C	B	A	E	A	E	B	C	D	E	C	B	C	C	C	B	A	C
+1120000006	52.50%	21	B	B	E	C	A	B	B	D	E	E	B	B	D	C	E	C	C	D	D	D	B	D	A	C	B	A	A	D	C	D	B	B	C	C	A	B	C	B	B	B
+1120000007	50%	20	B	A	E	C	A	B	E	A	E	C	A	E	E	B	A	B	D	D	E	B	E	B	B	D	E	D	A	E	C	B	D	B	B	C	C	C	C	B	B	B
+1120000008	45%	18	B	B	E	C	A	B	B	E	D	B	E	D	C	D	E	A	A	B	C	D	E	B	B	B	A	B	B	E	B	C	B	B	D	B	A	C	C	B	B	E
+1120000009	55%	22	B	B	E	B	A	B	B	X	C	D	E	D	D	A	E	C	A	E	E	A	B	A	A	B	A	B	A	D	B	C	B	B	C	B	A	C	C	B	A	E
+1120000010	40%	16	C	B	E	E	A	B	B	D	C	D	B	D	D	A	E	A	B	C	C	C	E	C	A	D	E	C	A	E	C	C	D	D	B	C	C	A	D	B	B	D
+1120000011	40%	16	D	C	E	C	A	E	A	C	E	D	E	D	B	A	E	C	B	D	D	C	E	B	B	D	A	D	A	E	C	B	B	B	B	C	E	B	D	B	A	E
+1120000012	60%	24	E	B	E	C	A	B	E	D	C	D	A	D	E	B	E	B	A	E	D	D	E	D	B	B	A	A	A	D	C	C	B	B	E	C	A	B	A	B	B	D
+1120000013	35%	14	B	B	E	C	A	B	C	B	E	B	E	E	C	B	A	D	B	E	E	B	E	D	A	D	E	A	E	E	B	C	E	E	C	C	A	B	D	B	A	C
+1120000014	52.50%	21	B	B	E	C	D	B	E	B	B	A	C	D	D	E	A	B	E	B	D	A	E	B	A	B	E	B	A	D	C	D	B	B	D	C	A	C	A	B	B	B
+1120000015	45%	18	A	C	C	C	A	B	A	D	C	A	A	D	D	B	E	B	A	E	C	C	E	B	B	B	A	D	A	E	E	A	D	B	D	B	C	B	D	B	A	D
+1120000016	60%	24	B	B	E	C	A	B	A	C	E	D	C	D	D	B	E	C	A	D	D	A	B	D	B	D	A	A	A	E	C	D	B	B	D	C	A	C	A	B	A	C
+1120000017	40%	16	A	C	C	A	A	B	B	B	B	B	C	D	D	A	E	B	B	E	D	D	B	D	A	B	A	B	A	E	B	C	E	E	B	C	A	B	C	B	A	D
+1120000018	52.50%	21	A	B	E	C	A	B	E	B	E	D	E	D	D	A	E	B	D	C	D	C	B	D	B	B	E	D	A	E	C	A	B	D	D	C	D	B	C	B	B	D
+1120000019	50%	20	B	D	E	C	A	B	B	C	E	D	B	D	E	D	A	D	B	C	D	A	B	B	A	B	E	B	A	B	B	C	E	B	C	B	A	C	C	B	B	A
+1120000020	42.50%	17	B	C	E	C	A	B	A	D	E	C	E	D	D	A	A	B	B	E	D	C	B	D	A	B	D	B	E	D	B	D	E	E	A	C	C	B	C	B	A	D
+1200000001	25%	10	B	C	E	B	C	C	A	E	C	D	D	A	C	B	A	E	D	C	B	C	A	D	E	B	C	D	E	B	B	D	C	A	D	C	E	E	B	A	B	D
+1200000002	22.50%	9	B	D	E	C	A	B	E	E	E	D	B	X	X	E	E	X	X	X	D	X	X	E	X	X	X	A	X	X	X	X	X	X	X	X	X	X	X	X	X	X
+1200000003	7.50%	3	C	B	A	C	D	B	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X
+1200000004	37.50%	15	D	B	E	C	B	B	E	B	E	C	A	D	D	B	E	D	A	E	D	A	E	C	C	A	A	A	A	E	B	B	B	B	D	B	B	X	X	X	X	X
+1200000005	52.50%	21	A	B	E	C	B	B	E	C	C	B	B	D	E	A	E	A	A	A	D	B	E	B	A	A	A	B	A	C	B	C	B	E	C	C	A	B	C	B	A	D
+1200000006	40%	16	B	B	D	C	A	B	A	A	C	X	B	E	C	A	A	D	C	E	E	B	E	D	C	B	A	B	A	D	B	A	D	C	D	B	A	B	D	A	A	E
+1200000007	30%	12	A	B	X	E	C	B	D	A	B	A	B	D	C	D	A	C	A	B	E	A	E	B	C	D	E	E	B	B	B	A	E	C	B	B	B	D	C	B	A	A
+1200000008	25%	10	E	B	O	C	B	D	E	C	A	B	A	A	D	C	B	D	B	D	C	A	B	B	A	E	A	B	C	D	B	C	A	B	D	B	A	B	D	B	O	O
+1200000009	47.50%	19	B	B	C	C	A	B	E	D	C	D	C	D	D	B	A	C	A	D	D	A	E	D	B	D	B	C	A	D	B	B	B	E	C	B	D	C	C	B	A	D
+1200000010	35%	14	B	B	E	C	B	B	E	B	C	D	B	E	B	C	E	E	B	C	D	X	B	C	B	D	B	B	A	E	D	C	D	E	B	B	B	A	D	B	B	D
+1200000011	40%	16	B	B	E	C	A	B	E	B	C	C	B	D	B	B	E	E	C	A	A	C	E	D	B	C	B	E	E	E	D	C	B	C	E	B	B	C	B	B	A	D
+1200000012	35%	14	X	X	A	C	X	B	E	E	C	B	E	D	E	C	E	E	A	D	E	C	E	B	A	B	E	B	A	E	D	A	B	E	C	C	B	C	E	B	B	E
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
+																																										
