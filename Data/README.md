@@ -1,5 +1,5 @@
-## VEYM Benchmark Data 2019
-# Individual Test Data
+# VEYM Benchmark Data 2019
+## Individual Test Data
 Within the non-profit organization, the youth are divided up into four different divisions. These include:
 * Seedling Division(AN) ranging from ages 6-9
 * Search Division (TN) ranging from ages 10-12
@@ -12,8 +12,8 @@ For each of the tests, we had data depicting their responses to questions, their
 
 These documents were labeled as (Division).(group [C1, C2, C3]).(numbers, letters, or answers) within the separate folders.
 
-# Chapter Data
+## Chapter Data
 All of the students took the test at one chapter. The chapters and their locations are located within the List of Leagues and Chapters with Location.xlsx document.
 
-# Topic Breakdown
+## Topic Breakdown
 The topic breakdown for each of the questions can be found in the Topic Breakdown.xlsx
