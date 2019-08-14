@@ -9,9 +9,9 @@ rm(list=ls())
 # Requires three text files: answers, answers of students per question, and 
 # scores of students per question. The data files for the student's answers and 
 # scores must start in column 4.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.letters.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.numbers.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.answers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C2.letters.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C2.numbers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C2.answers.txt
 #
 letters_entry <- readline(prompt = "Letter responses input path for test: ")
 numbers_entry <- readline(prompt = "Question scores input path for test: ")
@@ -25,7 +25,7 @@ name = readline(prompt = "Class name and division for test: ")
 #
 section_names <- c()
 section_count <- c()
-sections = as.numeric(readline("Number of sections in this test: "))
+sections <- as.numeric(readline("Number of sections in this test: "))
 for (i in 1:sections) {
   category_name <- readline("Section name: ")
   category_count <- readline("Questions pertaining to this category: ")
@@ -37,6 +37,7 @@ section_count <- rev(section_count)
 
 # Saving plots in pdf ----------------------------------------------------------
 # Sets the name and destination of the file for all data visualization plots.
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization
 #
 setwd(readline("What is the output path of your file? "))
 pdf(readline("What is the name of your pdf? "))
@@ -54,18 +55,18 @@ students <- nrow(dat)
 # Creates a histogram and boxplot of the overall test in addition to
 # identifying the 5-number summary.
 #
-par(mfrow = c(1,2))
-summ <- as.numeric(unlist(dat[2])) / questions
+par(mfrow = c(1,1))
+summ <- as.numeric(unlist(dat[3])) / questions
 hist(summ, main = paste("Histogram of", name, sep = " "), xlab = "Percentages")
 abline(v = mean(summ),col = "#FF0000")
 statist = c(summary(summ), sd(summ))
 print(statist)
-boxplot(summ, main = paste("Boxplot of the test for", name, sep = " "))
+boxplot(summ, main = paste("Boxplot of the scores for", name, sep = " "))
 
 # Sectional Statistical Data ---------------------------------------------------
 # Makes a histogram and boxplot of all the sections
 #
-par(mfrow = c(3,4))
+par(mfrow = c(2,2))
 n.trials <- seq(from = 4, to = questions + 3, by = 1)
 range <- c(4, 4+section_count[1]-1)
 for (j in 1:sections) {
@@ -90,16 +91,21 @@ for (j in 1:sections) {
 par(mfrow = c(3, 3))
 entries <- 0
 for (i in n.trials) {
-  # utf8ToInt("A") = 65, want index 1 for it
-  index <- utf8ToInt(as.character(answers[1, i-3])) - 64
+  # utf8ToInt("A") = 65, to get index 1, we subtract off 64
   cols <- c("#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000",
             "#FF0000", "#FF0000")
+  if (nchar(as.character(answers[1, i - 3])) > 1) {
+    index <- utf8ToInt(substr(as.character(answers[1, i - 3]), 0, 1)) - 64 + 1
+    cols <- append(cols, "#FF0000")
+  }  else {
+    index <- utf8ToInt(as.character(answers[1, i - 3])) - 64
+  }
   cols[index] <- "#7CFC00"
-  barplot(prop.table(table(dat[i])), main = paste("Question", i-3, sep = " "),
+  barplot(prop.table(table(dat[i])), main = paste("Question", i - 3, sep = " "),
           col = cols)
-  new_entry <- data.frame(i-3, prop.table(table(dat[i]))[index])
+  new_entry <- data.frame(i - 3, prop.table(table(dat[i]))[index])
   names(new_entry) <- c("Question", "% Correct")
-  entries = rbind(entries, new_entry)
+  entries <- rbind(entries, new_entry)
 }
 
 # Individual Question Summary Visualization ------------------------------------
@@ -109,10 +115,13 @@ par(mfrow = c(1,1))
 entries2 <- entries
 entries2[2] <- round(entries[2] * 10) / 10
 barplot(table(entries2), main = "Barplot of Question Correct Percentages",
-        space = 0, col = "lightblue")
+        space = 0, col = "lightblue", xlab = "% Correct",
+        ylab = "Count of Questions")
 summary(unlist(entries[2]))
 plot(unlist(entries[1]), unlist(entries[2]), xlab = "Question Number",
      ylab = "% Correct", main = "Plot of Question Correct Percentages")
+
 # Closing pdf ------------------------------------------------------------------
 # Closes the pdf and saves the pdf with the inputted data plots.
+#
 dev.off()
