@@ -2,6 +2,7 @@
 1) The first graph depicts a histogram of all the scores for the test with a red line at the mean percentage.
 2) The second graph depicts a boxplot of all the scores with outliers indicated as dots.
 3) The following 6 graphs and boxplots indicate the scores for the categories within the test.
+
 4)The next graphs (amount depending on the number of questions) are each question breakdown and the responses.
  * X means that no answer was given
  * O means that there was another answer given aside from A, B, C, D, E, or X
