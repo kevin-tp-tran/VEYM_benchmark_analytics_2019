@@ -9,9 +9,9 @@ rm(list=ls())
 # Requires three text files: answers, answers of students per question, and 
 # scores of students per question. The data files for the student's answers and 
 # scores must start in column 4.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C2.letters.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C2.numbers.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C2.answers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\NS\\NS.C2.letters.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\NS\\NS.C2.numbers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\NS\\NS.C2.answers.txt
 #
 letters_entry <- readline(prompt = "Letter responses input path for test: ")
 numbers_entry <- readline(prompt = "Question scores input path for test: ")
@@ -55,7 +55,7 @@ students <- nrow(dat)
 # Creates a histogram and boxplot of the overall test in addition to
 # identifying the 5-number summary.
 #
-par(mfrow = c(1,1))
+par(mfrow = c(1,2))
 summ <- as.numeric(unlist(dat[3])) / questions
 hist(summ, main = paste("Histogram of", name, sep = " "), xlab = "Percentages")
 abline(v = mean(summ),col = "#FF0000")
@@ -66,7 +66,7 @@ boxplot(summ, main = paste("Boxplot of the scores for", name, sep = " "))
 # Sectional Statistical Data ---------------------------------------------------
 # Makes a histogram and boxplot of all the sections
 #
-par(mfrow = c(2,2))
+par(mfrow = c(3,4))
 n.trials <- seq(from = 4, to = questions + 3, by = 1)
 range <- c(4, 4+section_count[1]-1)
 for (j in 1:sections) {
@@ -88,7 +88,7 @@ for (j in 1:sections) {
 # Creates a histogram for every question with the correct answer colored in as
 # green and the others colored in as red.
 #
-par(mfrow = c(3, 3))
+par(mfrow = c(4, 4))
 entries <- 0
 for (i in n.trials) {
   # utf8ToInt("A") = 65, to get index 1, we subtract off 64
@@ -111,7 +111,7 @@ for (i in n.trials) {
 # Individual Question Summary Visualization ------------------------------------
 # Plots the percentages correct of every question as a barplot and a plot.
 #
-par(mfrow = c(1,1))
+par(mfrow = c(1,2))
 entries2 <- entries
 entries2[2] <- round(entries[2] * 10) / 10
 barplot(table(entries2), main = "Barplot of Question Correct Percentages",
