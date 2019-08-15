@@ -63,26 +63,43 @@ statist = c(summary(summ), sd(summ))
 print(statist)
 boxplot(summ, main = paste("Boxplot of the scores for", name, sep = " "))
 
+qqnorm(summ, cex = 0.5)
+abline(mean(summ), sd(summ))
+mean(summ)
+sd(summ)
+
 # Sectional Statistical Data ---------------------------------------------------
 # Makes a histogram and boxplot of all the sections
 #
 par(mfrow = c(3,2))
+section_scores <- matrix(0L, nrow = students, ncol = sections)
+colnames(section_scores) <- section_names
+rownames(section_scores) <- dat$Student_ID
+section_scores <- as.table(section_scores)
 n.trials <- seq(from = 4, to = questions + 3, by = 1)
 range <- c(4, 4+section_count[1]-1)
 for (j in 1:sections) {
-  section_scores <- c()
   for (i in 1:students) {
-    section_scores <- append(sum(dat_numbers[i, range[1]:range[2]]),
-                             section_scores)
+    section_scores[i, j] <- sum(dat_numbers[i, range[1]:range[2]])
   }
-  hist(section_scores, col = c("#009999"), main = 
-       paste("Histogram of", section_names[j], sep = " "), 
+  hist(section_scores[, j], col = c("#009999"), main = 
+         paste("Histogram of", section_names[j], sep = " "), 
        xlab = paste("Scores of", section_names[j], sep = " "))
-  boxplot(section_scores, main = 
-          paste("Boxplot of", section_names[j], sep = " "))
+  boxplot(section_scores[, j], main = 
+            paste("Boxplot of", section_names[j], sep = " "))
   range[1] <- range[1] + section_count[j]
   range[2] <- range[2] + section_count[j+1]
 }
+
+# heatmap(section_scores)
+# plot(section_scores)
+cor(section_scores)
+# plot(section_scores[, 1], section_scores[, 2])
+# y <- section_scores[, 1]
+# x <- section_scores[, 2]
+# model.1 <- lm(y ~ x)
+# abline(model.1)
+# summary(model.1)
 
 # Individual Question Visualization --------------------------------------------
 # Creates a histogram for every question with the correct answer colored in as
