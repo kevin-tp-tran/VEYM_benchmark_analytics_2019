@@ -9,9 +9,9 @@ rm(list=ls())
 # Requires three text files: answers, answers of students per question, and 
 # scores of students per question. The data files for the student's answers and 
 # scores must start in column 4.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\TN\\TN.C3.letters.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\TN\\TN.C3.numbers.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\TN\\TN.C3.answers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.letters.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.numbers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.answers.txt
 #
 letters_entry <- readline(prompt = "Letter responses input path for test: ")
 numbers_entry <- readline(prompt = "Question scores input path for test: ")
@@ -40,7 +40,11 @@ section_count <- rev(section_count)
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization
 #
 setwd(readline("What is the output path of your file? "))
-pdf(readline("What is the name of your pdf? "))
+file_name <- paste(tolower(substring(name, 1, 2)), "c",
+                   toString(sum(charToRaw(tolower(name)) == charToRaw('i'))),
+                   sep = "")
+pdf(paste(file_name, "_graphs.pdf", sep = ""))
+sink(paste(file_name, "_analytics.txt", sep = ""))
 
 # Initializing text files ------------------------------------------------------
 # Takes the inputted text files and initializes them as objects.
@@ -50,6 +54,11 @@ dat_numbers <- read.table(numbers_entry, header = T, fill = TRUE)
 answers <- read.table(answers_entry, header = T, fill = TRUE)
 questions <- ncol(answers)
 students <- nrow(dat)
+cat("Test Summary", "\n")
+cat("----------------------------------------------", "\n")
+cat("Analytics for", name, "\n")
+cat("Questions = ", questions, "\n", sep = "")
+cat("Students = ", students, "\n \n", sep = "")
 
 # Overall Test Statistics ------------------------------------------------------
 # Creates a histogram and boxplot of the overall test in addition to
@@ -57,21 +66,30 @@ students <- nrow(dat)
 #
 par(mfrow = c(1,2))
 summ <- as.numeric(unlist(dat[3])) / questions
-hist(summ, main = paste("Histogram of", name, sep = " "), xlab = "Percentages")
+hist(summ, main = paste("Histogram of", name, sep = "\n"), xlab = "Percentages")
 abline(v = mean(summ),col = "#FF0000")
 statist = c(summary(summ), sd(summ))
-print(statist)
-boxplot(summ, main = paste("Boxplot of the scores for", name, sep = " "))
-
-qqnorm(summ, cex = 0.5)
+rows <- c("Min", "1st Quart.", "Median", "Mean", "3rd Quart.", "Max.",
+          "Standard Deviation")
+cat("Histogram of", name, "Analytics", "\n")
+for (i in 1:length(rows)) {
+  cat(rows[i], "=", statist[i], "\n")
+}
+cat("\n \n")
+boxplot(summ, main = paste("Boxplot of the scores for", name, sep = "\n"))
+par(mfrow = c(1,1))
+qqnorm(summ, cex = 0.5, xlab = "Normal Distribution", ylab = "Test Quantiles")
 abline(mean(summ), sd(summ))
-mean(summ)
-sd(summ)
+legend('topleft', c(paste('Mean =', round(mean(summ), 2)), 
+                    paste('SD =', round(sd(summ), 2))), 
+       text.col = c('black', 'red'), bty = 'n')
 
 # Sectional Statistical Data ---------------------------------------------------
 # Makes a histogram and boxplot of all the sections
 #
-par(mfrow = c(3,2))
+cat("Section Summary", "\n")
+cat("----------------------------------------------", "\n")
+par(mfrow = c(3,4))
 section_scores <- matrix(0L, nrow = students, ncol = sections)
 colnames(section_scores) <- section_names
 rownames(section_scores) <- dat$Student_ID
@@ -83,28 +101,36 @@ for (j in 1:sections) {
     section_scores[i, j] <- sum(dat_numbers[i, range[1]:range[2]])
   }
   hist(section_scores[, j], col = c("#009999"), main = 
-         paste("Histogram of", section_names[j], sep = " "), 
-       xlab = paste("Scores of", section_names[j], sep = " "))
+         paste("Histogram of", section_names[j], sep = "\n"), 
+       xlab = paste("Scores of", section_names[j], sep = "\n"))
   boxplot(section_scores[, j], main = 
-            paste("Boxplot of", section_names[j], sep = " "))
+            paste("Boxplot of", section_names[j], sep = "\n"))
+  cat("Scores of", section_names[j], "from lowest to highest:")
+  print(table(section_scores[, j]))
+  cat("Score calculated from questions ", range[1] - 3, " to ", range[2] - 2,
+      ".\n", sep = "")
+  cat("Mean = ", mean(section_scores[, j]), "\n", sep = "")
+  cat("Standard Deviation = ", sd(section_scores[, j]), "\n \n", sep = "")
   range[1] <- range[1] + section_count[j]
   range[2] <- range[2] + section_count[j+1]
 }
-
-# heatmap(section_scores)
-# plot(section_scores)
+cat("\nSection Linear Correlation\n")
+cat("----------------------------------------------", "\n")
 cor(section_scores)
-# plot(section_scores[, 1], section_scores[, 2])
-# y <- section_scores[, 1]
-# x <- section_scores[, 2]
-# model.1 <- lm(y ~ x)
-# abline(model.1)
-# summary(model.1)
+cat("\n")
+cat("The above table shows the linear correlation between all sections. \n")
+cat("Values near zero show there is no correlation, whereas values near one\n")
+cat("show there is a correlation between the two categorical scores.")
+cat("\n \n")
+cat("\nIndividual Question Summary \n")
+cat("----------------------------------------------", "\n")
 
 # Individual Question Visualization --------------------------------------------
 # Creates a histogram for every question with the correct answer colored in as
 # green and the others colored in as red.
 #
+cat("Key: The 1st row are the responses, and the 2nd row are the counts of these responses.\n")
+cat("     X = no responses, O = other from A-E and the correct answer.\n \n")
 par(mfrow = c(3, 3))
 entries <- 0
 for (i in n.trials) {
@@ -118,25 +144,32 @@ for (i in n.trials) {
     index <- utf8ToInt(as.character(answers[1, i - 3])) - 64
   }
   cols[index] <- "#7CFC00"
-  barplot(prop.table(table(dat[i])), main = paste("Question", i - 3, sep = " "),
+  qst_resp <- table(dat[i])
+  barplot(prop.table(qst_resp), main = paste("Question", i - 3, sep = " "),
           col = cols, ylab = "Percentage")
+  cat("Count of answer responses for question ", i - 3, ":", sep = "")
+  print.table(qst_resp)
+  cat("The correct answer is ", toString(answers[1, i-3]), ".\n", sep = "")
+  cat("Percentage Correct: ", round(prop.table(qst_resp)[index] * 100, digits = 2)
+      ,"%.\n \n", sep = "")
   new_entry <- data.frame(i - 3, prop.table(table(dat[i]))[index])
   names(new_entry) <- c("Question", "% Correct")
   entries <- rbind(entries, new_entry)
 }
+sink()
 
 # Individual Question Summary Visualization ------------------------------------
 # Plots the percentages correct of every question as a barplot and a plot.
 #
-par(mfrow = c(1,1))
+par(mfrow = c(1,2))
 entries2 <- entries
 entries2[2] <- round(entries[2] * 10) / 10
-barplot(table(entries2), main = "Barplot of Question Correct Percentages",
+barplot(table(entries2), main = "Barplot of Question \n Correct Percentages",
         space = 0, col = "lightblue", xlab = "% Correct",
-        ylab = "Count of Questions")
+        ylab = "Question Count")
 summary(unlist(entries[2]))
 plot(unlist(entries[1]), unlist(entries[2]), xlab = "Question Number",
-     ylab = "% Correct", main = "Plot of Question Correct Percentages")
+     ylab = "% Correct", main = "Plot of Question \n Correct Percentages")
 
 # Closing pdf ------------------------------------------------------------------
 # Closes the pdf and saves the pdf with the inputted data plots.
