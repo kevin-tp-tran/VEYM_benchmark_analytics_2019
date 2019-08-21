@@ -4,6 +4,8 @@
 
 # Clears the global environment ------------------------------------------------
 rm(list=ls())
+sink()
+dev.off()
 
 # Text File entry --------------------------------------------------------------
 # Requires three text files: answers, answers of students per question, and 
@@ -12,6 +14,9 @@ rm(list=ls())
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.letters.txt
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.numbers.txt
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.answers.txt
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.letters.txt
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.numbers.txt
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.answers.txt
 #
 letters_entry <- readline(prompt = "Letter responses input path for test: ")
 numbers_entry <- readline(prompt = "Question scores input path for test: ")
@@ -35,27 +40,30 @@ for (i in 1:sections) {
 section_names <- rev(section_names)
 section_count <- rev(section_count)
 
-dat <- read.table(letters_entry, header = T, fill = TRUE)
-dat_numbers <- read.table(numbers_entry, header = T, fill = TRUE)
+dat_natl <- read.table(letters_entry, header = T, fill = TRUE)
+dat_numbers_natl <- read.table(numbers_entry, header = T, fill = TRUE)
 answers <- read.table(answers_entry, header = T, fill = TRUE)
+students <- nrow(dat_natl)
 questions <- ncol(answers)
-students <- nrow(dat)
 setwd(readline("What is the output path of your file? "))
-test_analysis(dat, dat_numbers, "pt", "tntt")
+
 
 # Saving plots in pdf ----------------------------------------------------------
 # Sets the name and destination of the file for all data visualization plots.
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\test
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\hsc1
 #
-test_analysis <- function(dat, dat_numbers, doan, lien_doan) {
+test_analysis <- function(dat, dat_numbers, doan) {
   file_name <- paste(tolower(substring(name, 1, 2)), "c",
                      toString(sum(charToRaw(tolower(name)) == charToRaw('i'))),
                      sep = "")
-  pdf(paste(file_name, "_graphs_", doan, "_", lien_doan, ".pdf", sep = ""))
-  sink(paste(file_name, "_analytics_", doan, "_", lien_doan, ".txt", sep = ""))
+  pdf(paste(file_name, "_graphs_", doan, ".pdf", sep = ""))
+  sink(paste(file_name, "_analytics_", doan, ".txt", sep = ""))
   
   # Initializing text files ------------------------------------------------------
   # Takes the inputted text files and initializes them as objects.
+  
+  students <- nrow(dat)
   cat("Test Summary", "\n")
   cat("----------------------------------------------", "\n")
   cat("Analytics for", name, "\n")
@@ -80,11 +88,14 @@ test_analysis <- function(dat, dat_numbers, doan, lien_doan) {
   cat("\n \n")
   boxplot(summ, main = paste("Boxplot of the scores for", name, sep = "\n"))
   par(mfrow = c(1,1))
-  qqnorm(summ, cex = 0.5, xlab = "Normal Distribution", ylab = "Test Quantiles")
-  abline(mean(summ), sd(summ))
-  legend('topleft', c(paste('Mean =', round(mean(summ), 2)), 
-                      paste('SD =', round(sd(summ), 2))), 
-         text.col = c('black', 'red'), bty = 'n')
+  if (students != 1) {
+    qqnorm(summ, cex = 0.5, xlab = "Normal Distribution", ylab = "Test Quantiles")
+    abline(mean(summ), sd(summ))
+    legend('topleft', c(paste('Mean =', round(mean(summ), 2)), 
+                        paste('SD =', round(sd(summ), 2))), 
+           text.col = c('black', 'red'), bty = 'n')
+  }
+
   
   # Sectional Statistical Data ---------------------------------------------------
   # Makes a histogram and boxplot of all the sections
@@ -112,18 +123,22 @@ test_analysis <- function(dat, dat_numbers, doan, lien_doan) {
     cat("Score calculated from questions ", range[1] - 3, " to ", range[2] - 2,
         ".\n", sep = "")
     cat("Mean = ", mean(section_scores[, j]), "\n", sep = "")
-    cat("Standard Deviation = ", sd(section_scores[, j]), "\n \n", sep = "")
+    if (students != 1) {
+      cat("Standard Deviation = ", sd(section_scores[, j]), "\n \n", sep = "")
+    }
     range[1] <- range[1] + section_count[j]
     range[2] <- range[2] + section_count[j+1]
   }
-  cat("\nSection Linear Correlation\n")
-  cat("----------------------------------------------", "\n")
-  cor(section_scores)
-  cat("\n")
-  cat("The above table shows the linear correlation between all sections. \n")
-  cat("Values near zero show there is no correlation, whereas values near one\n")
-  cat("show there is a correlation between the two categorical scores.")
-  cat("\n \n")
+  # cat("\nSection Linear Correlation\n")
+  # cat("----------------------------------------------", "\n")
+  # if (sd(section_scores) != 0) {
+  #   print(cor(section_scores))
+  # }
+  # cat("\n")
+  # cat("The above table shows the linear correlation between all sections. \n")
+  # cat("Values near zero show there is no correlation, whereas values near one\n")
+  # cat("show there is a correlation between the two categorical scores.")
+  # cat("\n \n")
   cat("\nIndividual Question Summary \n")
   cat("----------------------------------------------", "\n")
   
@@ -179,14 +194,15 @@ test_analysis <- function(dat, dat_numbers, doan, lien_doan) {
   dev.off()
 }
 # Chapter work -----------------------------------------------------------------
-dat_numbers2 <- dat_numbers
-dat_numbers2[, 1] <- round(dat_numbers[, 1] / 10000000)
+test_analysis(dat_natl, dat_numbers_natl, "pt")
+
+dat_numbers2 <- dat_numbers_natl
+dat_numbers2[, 1] <- round(dat_numbers_natl[, 1] / 10000000)
 chapters <- unique(dat_numbers2[, 1])
-chapter_ID <- read.table("C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\League.Chapters.csv",
+chapter_ID <- read.table("E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\League.Chapters.csv",
                          header = T, fill = TRUE, sep = ",")
 indices <- numeric(length(chapters) + 1)
 # Find first index of the given chapters
-dat_numbers2[, 1]
 for (i in 1:length(chapters)) {
   indices[i] <- which(dat_numbers2[, 1] == chapters[i])
 }
@@ -194,16 +210,12 @@ indices[i + 1] <- students
 for (i in 1:(length(indices) - 1)) {
   if (i != length(indices) - 1) {
     new_numbers <- dat_numbers2[indices[i]:(indices[i + 1] - 1) ,]
-    new_letters <- dat[indices[i]:(indices[i + 1] - 1) ,]
+    new_letters <- dat_natl[indices[i]:(indices[i + 1] - 1) ,]
   } else {
     new_numbers <- dat_numbers2[indices[i]:indices[i + 1] ,]
-    new_letters <- dat[indices[i]:indices[i + 1] ,]
+    new_letters <- dat_natl[indices[i]:indices[i + 1] ,]
   }
-  doan <- chapter_ID[chapter_ID$Chapter.ID == chapters[i] ,][3]
-  lien_doan <- chapter_ID[chapter_ID$Chapter.ID == chapters[i] ,][2]
-  test_analysis(new_letters, new_numbers, doan, lien_doan)
-  print(i)
+  doan <- chapters[i]
+  test_analysis(new_letters, new_numbers, doan)
 }
-
-
 

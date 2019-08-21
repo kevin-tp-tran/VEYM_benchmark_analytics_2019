@@ -1,0 +1,216 @@
+Test Summary 
+---------------------------------------------- 
+Analytics for TN Cap I 
+Questions = 25
+Students = 14
+ 
+Histogram of TN Cap I Analytics 
+Min = 0.28 
+1st Quart. = 0.45 
+Median = 0.6 
+Mean = 0.5742857 
+3rd Quart. = 0.71 
+Max. = 0.84 
+Standard Deviation = 0.1730146 
+
+ 
+Section Summary 
+---------------------------------------------- 
+Scores of Weekly Gospel from lowest to highest:
+0 1 2 3 
+1 2 5 6 
+Score calculated from questions 1 to 5.
+Mean = 2.142857
+Standard Deviation = 0.9492623
+ 
+Scores of Eucharist from lowest to highest:
+1 2 3 5 6 7 8 9 
+1 1 3 1 2 3 2 1 
+Score calculated from questions 5 to 14.
+Mean = 5.357143
+Standard Deviation = 2.530039
+ 
+Scores of Formation from lowest to highest:
+1 2 3 
+5 3 6 
+Score calculated from questions 14 to 17.
+Mean = 2.071429
+Standard Deviation = 0.9168748
+ 
+Scores of Specialty from lowest to highest:
+0 1 2 3 
+1 3 8 2 
+Score calculated from questions 17 to 20.
+Mean = 1.785714
+Standard Deviation = 0.8017837
+ 
+Scores of Phong Trao from lowest to highest:
+0 2 3 4 
+2 7 3 2 
+Score calculated from questions 20 to 25.
+Mean = 2.214286
+Standard Deviation = 1.188313
+ 
+Scores of Songs from lowest to highest:
+ 0  1 
+ 3 11 
+Score calculated from questions 25 to 26.
+Mean = 0.7857143
+Standard Deviation = 0.4258153
+ 
+
+Individual Question Summary 
+---------------------------------------------- 
+Key: The 1st row are the responses, and the 2nd row are the counts of these responses.
+     X = no responses, O = other from A-E and the correct answer.
+ 
+Count of answer responses for question 1:
+A B C D E O X 
+0 7 4 3 0 0 0 
+The correct answer is B.
+Percentage Correct: 50%.
+ 
+Count of answer responses for question 2:
+ A  B  C  D  X 
+ 0 12  0  2  0 
+The correct answer is B.
+Percentage Correct: 85.71%.
+ 
+Count of answer responses for question 3:
+A B C D X 
+9 3 1 1 0 
+The correct answer is C.
+Percentage Correct: 7.14%.
+ 
+Count of answer responses for question 4:
+ A  B  C  D  E  X 
+ 1  2 10  1  0  0 
+The correct answer is C.
+Percentage Correct: 71.43%.
+ 
+Count of answer responses for question 5:
+A B C D E O X 
+0 7 0 7 0 0 0 
+The correct answer is D.
+Percentage Correct: 50%.
+ 
+Count of answer responses for question 6:
+ A AB  B  C  D  O  X 
+ 1  5  1  2  1  4  0 
+The correct answer is AB.
+Percentage Correct: 35.71%.
+ 
+Count of answer responses for question 7:
+A B C D E X 
+7 2 3 2 0 0 
+The correct answer is A.
+Percentage Correct: 50%.
+ 
+Count of answer responses for question 8:
+A B C D E X 
+1 4 2 7 0 0 
+The correct answer is D.
+Percentage Correct: 50%.
+ 
+Count of answer responses for question 9:
+A B C D O X 
+8 5 1 0 0 0 
+The correct answer is A.
+Percentage Correct: 57.14%.
+ 
+Count of answer responses for question 10:
+ A  B  C  D  O  X 
+ 0  0 12  1  1  0 
+The correct answer is C.
+Percentage Correct: 85.71%.
+ 
+Count of answer responses for question 11:
+ A  B  C  D  E  O  X 
+12  1  0  0  0  1  0 
+The correct answer is A.
+Percentage Correct: 85.71%.
+ 
+Count of answer responses for question 12:
+A B C D E O X 
+0 4 1 8 0 1 0 
+The correct answer is D.
+Percentage Correct: 57.14%.
+ 
+Count of answer responses for question 13:
+A B C D E O X 
+0 9 0 4 0 0 1 
+The correct answer is B.
+Percentage Correct: 64.29%.
+ 
+Count of answer responses for question 14:
+ A  B  C  D  E  O  X 
+12  1  1  0  0  0  0 
+The correct answer is A.
+Percentage Correct: 85.71%.
+ 
+Count of answer responses for question 15:
+ A  B  C  D  E  X 
+ 2  2 10  0  0  0 
+The correct answer is C.
+Percentage Correct: 71.43%.
+ 
+Count of answer responses for question 16:
+A B C D O X 
+7 2 2 3 0 0 
+The correct answer is A.
+Percentage Correct: 50%.
+ 
+Count of answer responses for question 17:
+ A  B  C  D  O  X 
+ 1 12  1  0  0  0 
+The correct answer is B.
+Percentage Correct: 85.71%.
+ 
+Count of answer responses for question 18:
+A B C D E X 
+4 2 6 1 0 1 
+The correct answer is A.
+Percentage Correct: 28.57%.
+ 
+Count of answer responses for question 19:
+A B C D E X 
+1 9 3 1 0 0 
+The correct answer is B.
+Percentage Correct: 64.29%.
+ 
+Count of answer responses for question 20:
+A B C D E O X 
+5 8 0 1 0 0 0 
+The correct answer is A.
+Percentage Correct: 35.71%.
+ 
+Count of answer responses for question 21:
+ A  B BD  C  D  O  X 
+ 0  1  3  1  2  6  1 
+The correct answer is BD.
+Percentage Correct: 21.43%.
+ 
+Count of answer responses for question 22:
+A B C D E O X 
+0 6 4 2 0 2 0 
+The correct answer is B.
+Percentage Correct: 42.86%.
+ 
+Count of answer responses for question 23:
+A B C D E O X 
+2 0 6 6 0 0 0 
+The correct answer is C.
+Percentage Correct: 42.86%.
+ 
+Count of answer responses for question 24:
+ A  B  C  D  O  X 
+11  2  0  0  0  1 
+The correct answer is A.
+Percentage Correct: 78.57%.
+ 
+Count of answer responses for question 25:
+ A  B  C  D  E  O  X 
+ 0  1 11  1  0  0  1 
+The correct answer is C.
+Percentage Correct: 78.57%.
+ 
