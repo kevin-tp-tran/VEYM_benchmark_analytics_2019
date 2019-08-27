@@ -4,7 +4,7 @@ Analytics for TN Cap III
 Questions = 25
 Students = 49
  
-Histogram of TN Cap III Analytics 
+TN Cap III Analytics 
 Min = 0.28 
 1st Quart. = 0.56 
 Median = 0.68 
@@ -61,7 +61,7 @@ Standard Deviation = 0.6474702
 
 Individual Question Summary 
 ---------------------------------------------- 
-Key: The 1st row are the responses, and the 2nd row are the counts of these responses.
+Key: The 1st row are the responses & the 2nd row are the counts.
      X = no responses, O = other from A-E and the correct answer.
  
 Count of answer responses for question 1:

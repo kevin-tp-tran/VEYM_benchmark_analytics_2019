@@ -4,7 +4,7 @@ Analytics for TN Cap II
 Questions = 25
 Students = 1
  
-Histogram of TN Cap II Analytics 
+TN Cap II Analytics 
 Min = 0.92 
 1st Quart. = 0.92 
 Median = 0.92 
@@ -49,7 +49,7 @@ Mean = 2
 
 Individual Question Summary 
 ---------------------------------------------- 
-Key: The 1st row are the responses, and the 2nd row are the counts of these responses.
+Key: The 1st row are the responses & the 2nd row are the counts.
      X = no responses, O = other from A-E and the correct answer.
  
 Count of answer responses for question 1:

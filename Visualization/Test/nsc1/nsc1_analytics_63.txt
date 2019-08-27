@@ -4,7 +4,7 @@ Analytics for NS Cap I
 Questions = 40
 Students = 39
  
-Histogram of NS Cap I Analytics 
+NS Cap I Analytics 
 Min = 0.15 
 1st Quart. = 0.225 
 Median = 0.275 
@@ -61,7 +61,7 @@ Standard Deviation = 0.8732028
 
 Individual Question Summary 
 ---------------------------------------------- 
-Key: The 1st row are the responses, and the 2nd row are the counts of these responses.
+Key: The 1st row are the responses & the 2nd row are the counts.
      X = no responses, O = other from A-E and the correct answer.
  
 Count of answer responses for question 1:

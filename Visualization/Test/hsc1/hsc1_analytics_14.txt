@@ -4,7 +4,7 @@ Analytics for HS Cap I
 Questions = 41
 Students = 6
  
-Histogram of HS Cap I Analytics 
+HS Cap I Analytics 
 Min = 0.3902439 
 1st Quart. = 0.445122 
 Median = 0.4756098 
@@ -54,7 +54,7 @@ Standard Deviation = 1.048809
 
 Individual Question Summary 
 ---------------------------------------------- 
-Key: The 1st row are the responses, and the 2nd row are the counts of these responses.
+Key: The 1st row are the responses & the 2nd row are the counts.
      X = no responses, O = other from A-E and the correct answer.
  
 Count of answer responses for question 1:

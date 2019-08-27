@@ -4,7 +4,7 @@ Analytics for HS Cap II
 Questions = 40
 Students = 1
  
-Histogram of HS Cap II Analytics 
+HS Cap II Analytics 
 Min = 0.725 
 1st Quart. = 0.725 
 Median = 0.725 
@@ -44,7 +44,7 @@ Mean = 5
 
 Individual Question Summary 
 ---------------------------------------------- 
-Key: The 1st row are the responses, and the 2nd row are the counts of these responses.
+Key: The 1st row are the responses & the 2nd row are the counts.
      X = no responses, O = other from A-E and the correct answer.
  
 Count of answer responses for question 1:

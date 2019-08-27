@@ -13,9 +13,9 @@ dev.off()
 # Requires three text files: answers, answers of students per question, and 
 # scores of students per question for the whole nation. The data files for the
 # student's answers and question 1 must start in column 4.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.letters.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.numbers.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.answers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.letters.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.numbers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.answers.txt
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.letters.txt
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.numbers.txt
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.answers.txt
@@ -45,8 +45,8 @@ section_count <- rev(section_count)
 # Setting Directory ------------------------------------------------------------
 # Sets the directory where all of the files will be placed once running the 
 # function.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\test
-# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\hsc2
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\test\\anc1
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\anc1\\making
 #
 setwd(readline("What is the output path of your file? "))
 
@@ -65,52 +65,33 @@ test_analysis <- function(dat, dat_numbers, doan) {
   file_name <- paste(tolower(substring(test_name, 1, 2)), "c",
                      toString(sum(charToRaw(tolower(test_name)) == charToRaw('i'))),
                      sep = "")
-  pdf(paste(file_name, "_graphs_", doan, ".pdf", sep = ""))
-  sink(paste(file_name, "_analytics_", doan, ".txt", sep = ""))
+  pdf(paste(doan, "_graphs_", file_name, ".pdf", sep = ""))
+  sink(paste(doan, "_analytics_", file_name, ".doc", sep = ""))
   students <- nrow(dat)
   
   # Introduction ---------------------------------------------------------------
   # Titles the txt file with a test summary portion depicting number of
   # questions and students
   #
-  cat("Test Summary", "\n")
+  cat("Test Summary for", test_name, "\n")
   cat("----------------------------------------------", "\n")
-  cat("Analytics for", test_name, "\n")
-  cat("Questions = ", questions, "\n", sep = "")
-  cat("Students = ", students, "\n \n", sep = "")
+  cat("Number of questions = ", questions, "\n", sep = "")
+  cat("Number of students = ", students, "\n \n", sep = "")
   
-  # Overall Test Statistics ----------------------------------------------------
-  # Creates a histogram and boxplot of the overall test in the pdf file in 
-  # addition to writing the 5-number summary in the txt file.
-  #
-  par(mfrow = c(1,2))
-  percentages <- as.numeric(unlist(dat[3])) / questions
-  hist(percentages, main = paste("Histogram of", test_name, "\nScores", sep = " "),
-       xlab = "Test Scores")
-  abline(v = mean(percentages),col = "#FF0000")
-  statist <- c(summary(percentages), sd(percentages))
-  rows <- c("Min", "1st Quart.", "Median", "Mean", "3rd Quart.", "Max.",
-            "Standard Deviation")
-  cat("Histogram of", test_name, "Analytics", "\n")
-  for (analytics in 1:length(rows)) {
-    cat(rows[analytics], "=", statist[analytics], "\n")
-  }
-  cat("\n \n")
-  boxplot(percentages, main = paste("Boxplot of", 
-                             test_name, "Test Scores", sep = " "))
   # If there is only one student, then the qqnorm does not run because there
   # is no histogram trend to compare to a distribution.
   #
-  if (students != 1) {
-    # Q-Q Plot
-    par(mfrow = c(1,1))
-    qqnorm(percentages, cex = 0.5, xlab = "Normal Distribution",
-           ylab = "Test Quantiles")
-    abline(mean(percentages), sd(percentages))
-    legend('topleft', c(paste('Mean =', round(mean(percentages), 2)), 
-                        paste('SD =', round(sd(percentages), 2))), 
-           text.col = c('black', 'red'), bty = 'n')
-  }
+  # Q-Q Plot 
+  # if (students != 1) {
+  #   # Q-Q Plot
+  #   par(mfrow = c(1,1))
+  #   qqnorm(percentages, cex = 0.5, xlab = "Normal Distribution",
+  #          ylab = "Test Quantiles")
+  #   abline(mean(percentages), sd(percentages))
+  #   legend('topleft', c(paste('Mean =', round(mean(percentages), 2)), 
+  #                       paste('SD =', round(sd(percentages), 2))), 
+  #          text.col = c('black', 'red'), bty = 'n')
+  # }
   
   # Sectional Statistical Data -------------------------------------------------
   # Makes a histogram and boxplot of all the sections in the pdf file.
@@ -119,6 +100,7 @@ test_analysis <- function(dat, dat_numbers, doan) {
   #
   cat("Section Summary", "\n")
   cat("----------------------------------------------", "\n")
+  cat("Key: The 1st row of the table are the scores & the 2nd row are the frequency.\n\n")
   par(mfrow = c(3,4))
   section_scores <- matrix(0L, nrow = students, ncol = sections)
   colnames(section_scores) <- section_names
@@ -132,18 +114,19 @@ test_analysis <- function(dat, dat_numbers, doan) {
         sum(dat_numbers[student, range[1]:range[2]])
     }
     hist(section_scores[, section], col = c("#009999"), main = 
-           paste("Histogram of", section_names[section], sep = "\n"), 
-         xlab = paste("Scores of", section_names[section], sep = "\n"))
-    boxplot(section_scores[, section], ylab = "Section Score", main = 
-              paste("Boxplot of", section_names[section], sep = "\n"))
+           paste(section_names[section], "\nSection"), 
+         xlab = paste(section_names[section], "Scores", sep = "\n"))
+    boxplot(section_scores[, section], ylab = "Section Scores", main = 
+              paste(section_names[section], "\nSection"))
     cat("Scores of", section_names[section], "from lowest to highest:")
     print(table(section_scores[, section]))
     cat("Score calculated from questions ", range[1] - 3, " to ", range[2] - 2,
         ".\n", sep = "")
-    cat("Mean = ", mean(section_scores[, section]), "\n", sep = "")
+    cat("The average score for this section is ", 
+        round(mean(section_scores[, section]), 2), ".\n", sep = "")
     if (students != 1) {
-      cat("Standard Deviation = ", 
-          sd(section_scores[, section]), "\n \n", sep = "")
+      cat("The average spread for this section is ", 
+          round(sd(section_scores[, section]), 2), ".\n \n", sep = "")
     }
     range[1] <- range[1] + section_count[section]
     range[2] <- range[2] + section_count[section + 1]
@@ -168,7 +151,7 @@ test_analysis <- function(dat, dat_numbers, doan) {
   #
   cat("\nIndividual Question Summary \n")
   cat("----------------------------------------------", "\n")
-  cat("Key: The 1st row are the responses & the 2nd row are the counts.\n")
+  cat("Key: The 1st row are the responses & the 2nd row are the frequency.\n")
   cat("     X = no responses, O = other from A-E and the correct answer.\n \n")
   par(mfrow = c(3, 3))
   entries <- 0
@@ -184,30 +167,54 @@ test_analysis <- function(dat, dat_numbers, doan) {
     }
     cols[index] <- "#7CFC00"
     qst_resp <- table(dat[i])
-    barplot(prop.table(qst_resp), main = paste("Question", i - 3, sep = " "),
-            col = cols, ylab = "Percentage of \nStudent Answers")
+    barplot(qst_resp, main = paste("Question", i - 3, sep = " "),
+            col = cols, xlab = "Answer Responses", ylab = "Frequency")
     cat("Count of answer responses for question ", i - 3, ":", sep = "")
     print.table(qst_resp)
     cat("The correct answer is ", toString(answers[1, i-3]), ".\n", sep = "")
-    cat("Percentage Correct: ", round(prop.table(qst_resp)[index] * 100,
-                                      digits = 2),"%.\n \n", sep = "")
+    cat("The percentage of students who got this answer correct is ",
+        round(prop.table(qst_resp)[index] * 100,digits = 2),"%.\n \n", sep = "")
     new_entry <- data.frame(i - 3, prop.table(table(dat[i]))[index])
     names(new_entry) <- c("Question", "% Correct")
     entries <- rbind(entries, new_entry)
   }
   
+  # Overall Test Statistics ----------------------------------------------------
+  # Creates a histogram and boxplot of the overall test in the pdf file in 
+  # addition to writing the 5-number summary in the txt file.
+  #
+  par(mfrow = c(2,2))
+  percentages <- as.numeric(unlist(dat[3])) / questions
+  hist(percentages, main = paste(test_name, "Test Scores"),
+       xlab = "Test Scores")
+  legend('topright', c(paste('Mean =', round(mean(percentages), 2)), 
+                       paste('SD =', round(sd(percentages), 2))), 
+         text.col = c('red', 'black'), bg = "White", border = "black")
+  if (students != 1) {
+    abline(v = mean(percentages),col = "#FF0000")
+  }
+  statist <- c(summary(percentages), sd(percentages))
+  rows <- c("Min", "1st Quart.", "Median", "Mean", "3rd Quart.", "Max.",
+            "Standard Deviation")
+  cat(test_name, "Analytics", "\n")
+  for (analytics in 1:length(rows)) {
+    cat(rows[analytics], "=", statist[analytics], "\n")
+  }
+  cat("\n \n")
+  boxplot(percentages, main = paste(test_name, "Test Scores", sep = " "),
+          ylab = "Test Scores")
+  
   # Individual Question Summary Visualization ----------------------------------
   # Plots the percentages correct of every question as a barplot and a plot.
   #
-  par(mfrow = c(1,2))
   entries2 <- entries
   entries2[2] <- round(entries[2] * 10) / 10
-  barplot(table(entries2), main = "Barplot of Question \n Correct Percentages",
-          space = 0, col = "lightblue", xlab = "% Correct",
-          ylab = "Question Count")
+  barplot(table(entries2), main = "Frequency of Correct Responses",
+          space = 0, col = "lightblue", xlab = "Correct Responses",
+          ylab = "Frequency")
   summary(unlist(entries[2]))
   plot(unlist(entries[1]), unlist(entries[2]), xlab = "Question Number",
-       ylab = "% Correct", main = "Plot of Question \n Correct Percentages")
+       ylab = "Correct Response", main = "Question vs. Correct\nResponses")
   
   # Closing files --------------------------------------------------------------
   # Closes the files and saves with the inputted sinked txt and the plots in the
