@@ -46,7 +46,7 @@ section_count <- rev(section_count)
 # Sets the directory where all of the files will be placed once running the 
 # function.
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\test
-# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\hsc1
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\hsc2
 #
 setwd(readline("What is the output path of your file? "))
 
@@ -85,8 +85,8 @@ test_analysis <- function(dat, dat_numbers, doan) {
   #
   par(mfrow = c(1,2))
   percentages <- as.numeric(unlist(dat[3])) / questions
-  hist(percentages, main = paste("Histogram of", test_name, sep = "\n"),
-       xlab = "Percentages")
+  hist(percentages, main = paste("Histogram of", test_name, "\nScores", sep = " "),
+       xlab = "Test Scores")
   abline(v = mean(percentages),col = "#FF0000")
   statist <- c(summary(percentages), sd(percentages))
   rows <- c("Min", "1st Quart.", "Median", "Mean", "3rd Quart.", "Max.",
@@ -96,8 +96,8 @@ test_analysis <- function(dat, dat_numbers, doan) {
     cat(rows[analytics], "=", statist[analytics], "\n")
   }
   cat("\n \n")
-  boxplot(percentages, main = paste("Boxplot of the scores for", 
-                             test_name, sep = "\n"))
+  boxplot(percentages, main = paste("Boxplot of", 
+                             test_name, "Test Scores", sep = " "))
   # If there is only one student, then the qqnorm does not run because there
   # is no histogram trend to compare to a distribution.
   #
@@ -134,7 +134,7 @@ test_analysis <- function(dat, dat_numbers, doan) {
     hist(section_scores[, section], col = c("#009999"), main = 
            paste("Histogram of", section_names[section], sep = "\n"), 
          xlab = paste("Scores of", section_names[section], sep = "\n"))
-    boxplot(section_scores[, section], main = 
+    boxplot(section_scores[, section], ylab = "Section Score", main = 
               paste("Boxplot of", section_names[section], sep = "\n"))
     cat("Scores of", section_names[section], "from lowest to highest:")
     print(table(section_scores[, section]))
@@ -185,7 +185,7 @@ test_analysis <- function(dat, dat_numbers, doan) {
     cols[index] <- "#7CFC00"
     qst_resp <- table(dat[i])
     barplot(prop.table(qst_resp), main = paste("Question", i - 3, sep = " "),
-            col = cols, ylab = "Percentage")
+            col = cols, ylab = "Percentage of \nStudent Answers")
     cat("Count of answer responses for question ", i - 3, ":", sep = "")
     print.table(qst_resp)
     cat("The correct answer is ", toString(answers[1, i-3]), ".\n", sep = "")

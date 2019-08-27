@@ -1,0 +1,12 @@
+The mean = the average test score
+Median = the middle value of the numbers
+2 standard deviations on both ends = 95% 
+Standard deviation = spread
+1st quartile = "About 25% of students had test scores below ______"
+Median = "About 50% of students had test scores below _______"
+3rd Quartile = "About 75% of students had test scores below 
+
+Why do we care about normal distribution?
+If the distribution is similar to a normal distribution we can conclude data similarly to a normal distribution
+Less than one standard deviation from the mean = 68%, less than two standard deviation from the mean = 95%
+99.7% is three standard deviations
