@@ -13,9 +13,9 @@ dev.off()
 # Requires three text files: answers, answers of students per question, and 
 # scores of students per question for the whole nation. The data files for the
 # student's answers and question 1 must start in column 4.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.letters.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.numbers.txt
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\AN\\AN.C1.answers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\TN\\TN.C2.letters.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\TN\\TN.C2.numbers.txt
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Data\\TN\\TN.C2.answers.txt
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.letters.txt
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.numbers.txt
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Data\\HS\\HS.C2.answers.txt
@@ -45,7 +45,7 @@ section_count <- rev(section_count)
 # Setting Directory ------------------------------------------------------------
 # Sets the directory where all of the files will be placed once running the 
 # function.
-# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\test\\anc1
+# C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\Chapter
 # E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\anc1\\making
 #
 setwd(readline("What is the output path of your file? "))
@@ -65,9 +65,10 @@ test_analysis <- function(dat, dat_numbers, doan) {
   file_name <- paste(tolower(substring(test_name, 1, 2)), "c",
                      toString(sum(charToRaw(tolower(test_name)) == charToRaw('i'))),
                      sep = "")
-  pdf(paste(doan, "_graphs_", file_name, ".pdf", sep = ""))
-  sink(paste(doan, "_analytics_", file_name, ".doc", sep = ""))
+  pdf(paste(doan, "_", file_name, "_graphs", ".pdf", sep = ""))
+  sink(paste(doan, "_", file_name, "_analytics", ".doc", sep = ""))
   students <- nrow(dat)
+
   
   # Introduction ---------------------------------------------------------------
   # Titles the txt file with a test summary portion depicting number of
@@ -77,6 +78,16 @@ test_analysis <- function(dat, dat_numbers, doan) {
   cat("----------------------------------------------", "\n")
   cat("Number of questions = ", questions, "\n", sep = "")
   cat("Number of students = ", students, "\n \n", sep = "")
+  
+  percentages <- as.numeric(unlist(dat[3])) / questions
+  statist <- c(summary(percentages), sd(percentages))
+  rows <- c("Min", "1st Quart.", "Median", "Mean", "3rd Quart.", "Max.",
+            "Standard Deviation")
+  cat(test_name, "Analytics", "\n")
+  for (analytics in 1:length(rows)) {
+    cat(rows[analytics], "=", statist[analytics], "\n")
+  }
+  cat("\n \n")
   
   # If there is only one student, then the qqnorm does not run because there
   # is no histogram trend to compare to a distribution.
@@ -184,7 +195,6 @@ test_analysis <- function(dat, dat_numbers, doan) {
   # addition to writing the 5-number summary in the txt file.
   #
   par(mfrow = c(2,2))
-  percentages <- as.numeric(unlist(dat[3])) / questions
   hist(percentages, main = paste(test_name, "Test Scores"),
        xlab = "Test Scores")
   legend('topright', c(paste('Mean =', round(mean(percentages), 2)), 
@@ -193,14 +203,6 @@ test_analysis <- function(dat, dat_numbers, doan) {
   if (students != 1) {
     abline(v = mean(percentages),col = "#FF0000")
   }
-  statist <- c(summary(percentages), sd(percentages))
-  rows <- c("Min", "1st Quart.", "Median", "Mean", "3rd Quart.", "Max.",
-            "Standard Deviation")
-  cat(test_name, "Analytics", "\n")
-  for (analytics in 1:length(rows)) {
-    cat(rows[analytics], "=", statist[analytics], "\n")
-  }
-  cat("\n \n")
   boxplot(percentages, main = paste(test_name, "Test Scores", sep = " "),
           ylab = "Test Scores")
   

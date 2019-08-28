@@ -1,0 +1,306 @@
+Test Summary for HS Cap I 
+---------------------------------------------- 
+Number of questions = 41
+Number of students = 3
+ 
+HS Cap I Analytics 
+Min = 0.3902439 
+1st Quart. = 0.4268293 
+Median = 0.4634146 
+Mean = 0.504065 
+3rd Quart. = 0.5609756 
+Max. = 0.6585366 
+Standard Deviation = 0.1386888 
+
+ 
+Section Summary 
+---------------------------------------------- 
+Key: The 1st row of the table are the scores & the 2nd row are the frequency.
+
+Scores of Weekly Gospel from lowest to highest:
+0 3 4 
+1 1 1 
+Score calculated from questions 1 to 7.
+The average score for this section is 2.33.
+The average spread for this section is 2.08.
+ 
+Scores of Spiritual Life from lowest to highest:
+2 3 
+1 2 
+Score calculated from questions 7 to 13.
+The average score for this section is 2.67.
+The average spread for this section is 0.58.
+ 
+Scores of Phong Trao from lowest to highest:
+ 8 11 14 
+ 1  1  1 
+Score calculated from questions 13 to 30.
+The average score for this section is 11.
+The average spread for this section is 3.
+ 
+Scores of Specialty from lowest to highest:
+2 3 5 
+1 1 1 
+Score calculated from questions 30 to 38.
+The average score for this section is 3.33.
+The average spread for this section is 1.53.
+ 
+Scores of Songs from lowest to highest:
+0 2 
+1 2 
+Score calculated from questions 38 to 42.
+The average score for this section is 1.33.
+The average spread for this section is 1.15.
+ 
+
+Individual Question Summary 
+---------------------------------------------- 
+Key: The 1st row are the responses & the 2nd row are the frequency.
+     X = no responses, O = other from A-E and the correct answer.
+ 
+Count of answer responses for question 1:
+A B C D E X 
+1 0 0 1 1 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 2:
+A B C D E 
+0 0 1 1 1 
+The correct answer is B.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 3:
+A B C D E 
+1 0 0 0 2 
+The correct answer is E.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 4:
+A B C E X 
+0 0 2 1 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 5:
+A B C D E X 
+1 0 0 2 0 0 
+The correct answer is A.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 6:
+A B C D E 
+0 2 0 0 1 
+The correct answer is B.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 7:
+A B C D E 
+0 3 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 8:
+A B C D E 
+1 0 1 1 0 
+The correct answer is D.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 9:
+A B C D E 
+0 2 1 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 10:
+A B C D E 
+0 1 0 0 2 
+The correct answer is A.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 11:
+A B C D E 
+0 0 1 0 2 
+The correct answer is C.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 12:
+A B C D E 
+0 1 0 0 2 
+The correct answer is B.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 13:
+A B C D E X 
+0 3 0 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 14:
+A B C D E X 
+1 0 2 0 0 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 15:
+A B C D E X 
+1 0 0 1 1 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 16:
+A B C D E X 
+2 0 1 0 0 0 
+The correct answer is A.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 17:
+A B C D E X 
+0 3 0 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 18:
+A B C D E X 
+0 0 0 3 0 0 
+The correct answer is D.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 19:
+A B C D E X 
+0 3 0 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 20:
+A B C D E X 
+3 0 0 0 0 0 
+The correct answer is A.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 21:
+A B C D E X 
+3 0 0 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 22:
+A B C D E X 
+0 0 2 0 1 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 23:
+A B C D E X 
+0 1 0 1 1 0 
+The correct answer is E.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 24:
+A B C D E X 
+2 0 1 0 0 0 
+The correct answer is A.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 25:
+A B C D E X 
+1 2 0 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 26:
+A B C D E X 
+0 1 2 0 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 27:
+A B C D E X 
+0 0 0 0 3 0 
+The correct answer is E.
+The percentage of students who got this answer correct is 100%.
+ 
+Count of answer responses for question 28:
+A B C D E X 
+1 0 1 0 1 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 29:
+A B C D E X 
+0 2 0 1 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 30:
+A B C D E X 
+2 0 0 0 1 0 
+The correct answer is A.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 31:
+A B C D E X 
+0 1 2 0 0 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 32:
+A B C D E X 
+0 2 1 0 0 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 33:
+A B C D E X 
+0 1 1 0 1 0 
+The correct answer is E.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 34:
+A B C D E X 
+1 0 1 0 1 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 35:
+A B C D E X 
+0 2 0 1 0 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 36:
+A B C D E X 
+2 0 0 0 1 0 
+The correct answer is D.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 37:
+A B C D E X 
+0 0 2 1 0 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 38:
+A B C D E X 
+0 2 0 0 1 0 
+The correct answer is B.
+The percentage of students who got this answer correct is 66.67%.
+ 
+Count of answer responses for question 39:
+A B C D E X 
+0 1 1 1 0 0 
+The correct answer is D.
+The percentage of students who got this answer correct is 33.33%.
+ 
+Count of answer responses for question 40:
+A B C D E X 
+1 2 0 0 0 0 
+The correct answer is C.
+The percentage of students who got this answer correct is 0%.
+ 
+Count of answer responses for question 41:
+A B C D E X 
+1 1 0 0 1 0 
+The correct answer is A.
+The percentage of students who got this answer correct is 33.33%.
+ 
