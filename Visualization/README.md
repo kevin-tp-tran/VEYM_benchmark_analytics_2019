@@ -4,6 +4,8 @@ For every test, there was either five or six overarching topics tested upon. Wit
 * A histogram of the frequency of scores for the given section
 * A boxplot of the division of scores for the given section.
 
+![Section Example](https://github.com/ktptran/VEYM_benchmark_analytics_2019/blob/master/Visualization/Pictures%20for%20README/Section.PNG?raw=true)
+
 ### Individual Question Breakdown
 The tests ranged from 25-50 questions. All of which had answers as either A, B, C, D, or E. Along with this, there are other responses students could have submitted such as not answering (labeled as an X in graphs), filling in another answer that usually included filling in two options (depicted as O). 
 
@@ -11,16 +13,26 @@ For O, the frequency was only added if the correct answer was not a multi-option
 
 For each question, the correct answer is depicted with a lime green and incorrect answers are red.
 
+![Answer Example](https://github.com/ktptran/VEYM_benchmark_analytics_2019/blob/master/Visualization/Pictures%20for%20README/Individual%20Question.PNG?raw=true)
+
 ### Overall Test Breakdown
 For the overall test breakdown, there are four graphs:
 
 1) In the upper left hand corner, there is a histogram frequency of the test scores. Along with that, there is a red line correlating to the mean which is the average test score. In addition, the standard deviation is listed, which depicts the spread of the data.
 
+![Answer Example](https://github.com/ktptran/VEYM_benchmark_analytics_2019/blob/master/Visualization/Pictures%20for%20README/Individual%20Question.PNG?raw=true)
+
 2) In the upper right hand corner, there is a boxplot depicting the given scores of the section.
 
-3) In the bottm left hand corner, there is a barplot showing the frequency of correct responses from the questions. For example, if questions 1-5 all had an overall correct response of 20%, the barplot would have a frequncy of 5 for 0.2.
+![Histogram of Overall Test Scores Example](https://github.com/ktptran/VEYM_benchmark_analytics_2019/blob/master/Visualization/Pictures%20for%20README/Upper%20Left.PNG?raw=true)
 
-4) In the bottom right hand corner, there is a scatterplot showing the questions vs the percentage of correct responses. This graph is mainly a tool to see if there are any trends or patterns per section or for any correlation between specific questions.
+3) In the lower left hand corner, there is a barplot showing the frequency of correct responses from the questions. For example, if questions 1-5 all had an overall correct response of 20%, the barplot would have a frequncy of 5 for 0.2.
+
+![Histogram of Test Scores Example](https://github.com/ktptran/VEYM_benchmark_analytics_2019/blob/master/Visualization/Pictures%20for%20README/Lower%20Left.PNG?raw=true)
+
+4) In the lower right hand corner, there is a scatterplot showing the questions vs the percentage of correct responses. This graph is mainly a tool to see if there are any trends or patterns per section or for any correlation between specific questions.
+
+![Scatterplot Example](https://github.com/ktptran/VEYM_benchmark_analytics_2019/blob/master/Visualization/Pictures%20for%20README/Lower%20Right.PNG?raw=true)
 
 # Analytical Files ((chapter\_number)\_(test)\_analytics.doc)
 ### Test Summary
