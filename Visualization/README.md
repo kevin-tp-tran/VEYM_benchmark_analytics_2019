@@ -44,6 +44,7 @@ A boxplot shows the data using 5 main values (referred to as the 5-number summar
   * The 1st quartile correlates to the value that splits off the lowest 25% of data from the highest 75%
   * The median cuts the data set in half (50% of data)
   * The third quartile splits offhighest 25% of data from the lowest 75%
+
 ![Boxplot Example](http://www.comfsm.fm/~dleeling/statistics/boxplot-explained.png)
 
 ### Mean and Standard Deviation
