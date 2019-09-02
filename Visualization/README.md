@@ -1,4 +1,4 @@
-# Reading Visualizations (.pdf files)
+# Reading Visualizations ((chapter\_number)\_(test)\_graphs.pdf)
 ### Section Breakdoown
 For every test, there was either five or six overarching topics tested upon. Within the section breakdown, you will find two graphs per section:
 * A histogram of the frequency of scores for the given section
@@ -22,7 +22,7 @@ For the overall test breakdown, there are four graphs:
 
 4) In the bottom right hand corner, there is a scatterplot showing the questions vs the percentage of correct responses. This graph is mainly a tool to see if there are any trends or patterns per section or for any correlation between specific questions.
 
-# Analytical Files ((chapter_number)\_(test)\_analytics.doc)
+# Analytical Files ((chapter\_number)\_(test)\_analytics.doc)
 ### Test Summary
 Within this section, it states the test you are looking at, the number of questions, the students, and the values needed for a boxplot (5-number summary) including the mean and standard deviation.
 
