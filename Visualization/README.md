@@ -1,5 +1,5 @@
 # Reading Visualizations ((chapter\_number)\_(test)\_graphs.pdf)
-### Section Breakdoown
+### Section Breakdown
 For every test, there was either five or six overarching topics tested upon. Within the section breakdown, you will find two graphs per section:
 * A histogram of the frequency of scores for the given section
 * A boxplot of the division of scores for the given section.
