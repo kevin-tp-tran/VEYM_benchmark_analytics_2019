@@ -46,7 +46,7 @@ section_count <- rev(section_count)
 # Sets the directory where all of the files will be placed once running the 
 # function.
 # C:\\Users\\kevint24\\Documents\\Project\\VEYM_benchmark_analytics_2019\\Visualization\\Chapter
-# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization\\Test\\anc1\\making
+# E:\\Coding\\VEYM_benchmark_analytics_2019\\Visualization
 #
 setwd(readline("What is the output path of your file? "))
 
@@ -118,7 +118,7 @@ test_analysis <- function(dat, dat_numbers, doan) {
   rownames(section_scores) <- dat$Student_ID
   section_scores <- as.table(section_scores)
   n.trials <- seq(from = 4, to = questions + 3, by = 1)
-  range <- c(4, 4+section_count[1]-1)
+  range <- c(4, 4 + section_count[1] - 1)
   for (section in 1:sections) {
     for (student in 1:students) {
       section_scores[student, section] <- 
@@ -131,7 +131,7 @@ test_analysis <- function(dat, dat_numbers, doan) {
               paste(section_names[section], "\nSection"))
     cat("Scores of", section_names[section], "from lowest to highest:")
     print(table(section_scores[, section]))
-    cat("Score calculated from questions ", range[1] - 3, " to ", range[2] - 2,
+    cat("Score calculated from questions ", range[1] - 3, " to ", range[2] - 3,
         ".\n", sep = "")
     cat("The average score for this section is ", 
         round(mean(section_scores[, section]), 2), ".\n", sep = "")
@@ -211,12 +211,12 @@ test_analysis <- function(dat, dat_numbers, doan) {
   #
   entries2 <- entries
   entries2[2] <- round(entries[2] * 10) / 10
-  barplot(table(entries2), main = "Frequency of Correct Responses",
-          space = 0, col = "lightblue", xlab = "Correct Responses",
+  barplot(table(entries2), main = "Frequency of Correct\nResponse Rate",
+          space = 0, col = "lightblue", xlab = "Correct Response Rate",
           ylab = "Frequency")
   summary(unlist(entries[2]))
   plot(unlist(entries[1]), unlist(entries[2]), xlab = "Question Number",
-       ylab = "Correct Response", main = "Question vs. Correct\nResponses")
+       ylab = "Correct Response Rate", main = "Question vs. Correct\nResponse Rate")
   
   # Closing files --------------------------------------------------------------
   # Closes the files and saves with the inputted sinked txt and the plots in the
